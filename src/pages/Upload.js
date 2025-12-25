@@ -41,7 +41,6 @@ import {
   Twitter
 } from "lucide-react";
 
-const API = "https://resumate-backend-vao1.onrender.com/api";
 
 
 const roleCategories = [
