@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "https://resumate-backend-vao1.onrender.com/api/$1"
+    }
+  ]
+}
