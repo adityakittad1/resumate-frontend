@@ -119,23 +119,24 @@ export default function Landing() {
                 </div>
               </div>
 
-              {/* Trust indicators */}
-              <div className="flex items-center gap-6 pt-4 animate-fade-in-up stagger-3">
-                <div className="flex -space-x-2">
-                  {[1, 2, 3, 4].map((i) => (
-                    <div 
-                      key={i}
-                      className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-medium"
-                    >
-                      {String.fromCharCode(64 + i)}
-                    </div>
-                  ))}
-                </div>
-                <p className="text-sm text-slate-600">
-                  Trusted by <span className="font-semibold text-slate-900">1,000+</span> students
-                </p>
-              </div>
-            </div>
+             {/* Trust indicators */}
+<div className="flex items-center gap-6 pt-4 animate-fade-in-up stagger-3">
+  <div className="flex -space-x-2">
+    {[...Array(4)].map((_, i) => {
+      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      const randomLetter = letters[Math.floor(Math.random() * letters.length)];
+      return (
+        <div 
+          key={i}
+          className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-medium"
+        >
+          {randomLetter}
+        </div>
+      );
+    })}
+  </div>
+</div>
+
 
             {/* Right Visual */}
             <div className="lg:col-span-5 hidden lg:block">
@@ -333,7 +334,7 @@ export default function Landing() {
                 <Github className="w-5 h-5" strokeWidth={1.5} />
               </a>
               <a 
-                href="https://x.com/" 
+                href="https://x.com/AdityaKittad/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-slate-400 hover:text-[#000] transition-colors duration-200"
