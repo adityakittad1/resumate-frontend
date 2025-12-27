@@ -122,20 +122,21 @@ export default function Landing() {
              {/* Trust indicators */}
 <div className="flex items-center gap-6 pt-4 animate-fade-in-up stagger-3">
   <div className="flex -space-x-2">
-    {[...Array(4)].map((_, i) => {
-      const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-      const randomLetter = letters[Math.floor(Math.random() * letters.length)];
-      return (
-        <div 
-          key={i}
-          className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-medium"
-        >
-          {randomLetter}
-        </div>
-      );
-    })}
+    {["A", "D", "P", "S"].map((letter, index) => (
+      <div
+        key={index}
+        className="w-8 h-8 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 border-2 border-white flex items-center justify-center text-white text-xs font-medium"
+      >
+        {letter}
+      </div>
+    ))}
   </div>
+
+  <span className="text-sm text-slate-600">
+    Trusted by many students</span>
 </div>
+</div>
+
 
 
             {/* Right Visual */}
